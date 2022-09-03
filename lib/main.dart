@@ -5,6 +5,7 @@ import 'package:movil_modular/pages/consultar.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/modificar.dart';
 import 'package:movil_modular/pages/registrar.dart';
+import 'package:movil_modular/pages/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         RegisterPage.route: (context) => RegisterPage(),
         EditPage.route: (context) => const EditPage(),
         ConsultPage.route: (context) => const ConsultPage(),
-        ConfigPage.route: (context) => const ConfigPage()
+        ConfigPage.route: (context) => const ConfigPage(),
+        ProfilePage.route:(context) => const ProfilePage()
       },
       initialRoute: HomePage.route,
     );
