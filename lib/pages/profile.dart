@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:movil_modular/pages/home.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String route = "/profile";
@@ -20,7 +21,16 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Información personal"),
+        centerTitle: true,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, HomePage.route, (route) => false);
+            },
+            icon: Icon(Icons.arrow_back)),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(17.0),
         child: ListView(
@@ -71,7 +81,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0),
                 ),
-
               ),
             )
           ],
