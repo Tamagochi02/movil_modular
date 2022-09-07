@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movil_modular/pages/moduleOne.dart';
+import 'package:movil_modular/pages/moduleDoc.dart';
 import 'package:movil_modular/pages/profile.dart';
 import 'package:movil_modular/widgets/module_card.dart';
 

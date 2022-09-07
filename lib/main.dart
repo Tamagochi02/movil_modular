@@ -4,7 +4,7 @@ import 'package:movil_modular/pages/consultar.dart';
 import 'package:movil_modular/pages/estadoDelArte.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/modificar.dart';
-import 'package:movil_modular/pages/moduleOne.dart';
+import 'package:movil_modular/pages/moduleDoc.dart';
 import 'package:movil_modular/pages/registrar.dart';
 import 'package:movil_modular/pages/profile.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // EditPage.route: (context) => const EditPage(),
         // ConsultPage.route: (context) => const ConsultPage(),
         ProfilePage.route:(context) => const ProfilePage(),
-        ModuleOnePage.route:(context) => const ModuleOnePage(),
+        ModuleDoc.route:(context) => const ModuleDoc(),
         EstadoArtePage.route:(context) => const EstadoArtePage()
       },
       initialRoute: HomePage.route,

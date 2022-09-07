@@ -6,9 +6,9 @@ import 'package:movil_modular/pages/estadoDelArte.dart';
 import 'package:movil_modular/widgets/doc_card.dart';
 import 'package:movil_modular/widgets/navigation_drawer.dart';
 
-class ModuleOnePage extends StatelessWidget {
-  static const String route = "/moduleone";
-  const ModuleOnePage({Key? key}) : super(key: key);
+class ModuleDoc extends StatelessWidget {
+  static const String route = "/moduledoc";
+  const ModuleDoc({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

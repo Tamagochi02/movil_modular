@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movil_modular/models/routeParamsModularProjectPage.dart';
-import 'package:movil_modular/pages/moduleOne.dart';
+import 'package:movil_modular/pages/moduleDoc.dart';
 
 class ModuleCard extends StatelessWidget {
   final String title;
@@ -44,7 +44,7 @@ class ModuleCard extends StatelessWidget {
         alignment: Alignment.topLeft,
       ),
       onTap: () => Navigator.pushNamedAndRemoveUntil(
-          context, ModuleOnePage.route, (route) => false, arguments: RouteParamsModularProjectPage(title, '')),
+          context, ModuleDoc.route, (route) => false, arguments: RouteParamsModularProjectPage(title, '')),
     );
   }
 }

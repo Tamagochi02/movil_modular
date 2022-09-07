@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movil_modular/pages/home.dart';
-import 'package:movil_modular/pages/moduleOne.dart';
+import 'package:movil_modular/pages/moduleDoc.dart';
 
 class EstadoArtePage extends StatelessWidget {
   static const String route = "/estadoarte";
@@ -20,7 +20,7 @@ class EstadoArtePage extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context, ModuleOnePage.route, (route) => false);
+                  context, ModuleDoc.route, (route) => false);
             },
             icon: Icon(Icons.close), color: Color.fromARGB(255, 51, 51, 51),),
       ),
