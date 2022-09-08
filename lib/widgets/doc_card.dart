@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movil_modular/pages/estadoDelArte.dart';
+import 'package:movil_modular/pages/DocRegister.dart';
 
 enum DocStatus { sinEntregar, entregado, debeModificarse, revisado }
 
@@ -51,23 +51,24 @@ class DocCard extends StatelessWidget {
                       status.name,
                       style: TextStyle(color: Colors.white),
                     ),
-                    TextButton(
-                        onPressed: () {
-                          if(docName!="Ninguno"){
-                            
-                          }
-                        },
-                        child: docName!="Ninguno"
-                            ? const Text("Ver")
-                            : const Text("Registrar")),
-                    // Text(docName.isNotEmpty? "Ver" : "Registrar")
+                    // TextButton(
+                    //     onPressed: () {
+                    //       if (docName != "Ninguno") {
+                    //         Navigator.pushNamedAndRemoveUntil(
+                    //         context, DocRegister.route, (route) => false);
+                    //       }
+                    //     },
+                    //     child: docName != "Ninguno"
+                    //         ? const Text("Ver")
+                    //         : const Text("Registrar")),
+                    Text(docName.isNotEmpty ? "Ver" : "Registrar")
                   ],
                 )
               ],
             )),
       ),
-      // onTap: () => Navigator.pushNamedAndRemoveUntil(
-      //     context, estadoArtePage.route, (route) => false),
+      onTap: () => Navigator.pushNamedAndRemoveUntil(
+          context, DocRegister.route, (route) => false),
     );
 //
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movil_modular/models/routeParamsModularProjectPage.dart';
-import 'package:movil_modular/pages/estadoDelArte.dart';
+import 'package:movil_modular/pages/DocRegister.dart';
 import 'package:movil_modular/widgets/doc_card.dart';
 import 'package:movil_modular/widgets/navigation_drawer.dart';
 
