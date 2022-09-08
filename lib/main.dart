@@ -1,7 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:movil_modular/pages/consultar.dart';
-import 'package:movil_modular/pages/estadoDelArte.dart';
+import 'package:movil_modular/pages/DocRegister.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/modificar.dart';
 import 'package:movil_modular/pages/moduleDoc.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // ConsultPage.route: (context) => const ConsultPage(),
         ProfilePage.route:(context) => const ProfilePage(),
         ModuleDoc.route:(context) => const ModuleDoc(),
-        EstadoArtePage.route:(context) => const EstadoArtePage()
+        DocRegister.route:(context) => const DocRegister()
       },
       initialRoute: HomePage.route,
     );
