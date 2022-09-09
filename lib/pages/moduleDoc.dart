@@ -12,7 +12,7 @@ class ModuleDoc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments
+    final args = ModalRoute.of(context)!.settings.arguments // variable que contiene datos de la clase routeParamsModularProjectPage
         as RouteParamsModularProjectPage;
     return Scaffold(
         appBar: AppBar(
