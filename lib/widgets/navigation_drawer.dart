@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:movil_modular/pages/consultar.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/modificar.dart';
-import 'package:movil_modular/pages/registrar.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
