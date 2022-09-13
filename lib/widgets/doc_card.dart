@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movil_modular/pages/DocRegister.dart';
+import 'package:movil_modular/pages/DocUpdateView.dart';
 
 enum DocStatus { sinEntregar, entregado, debeModificarse, revisado }
 
@@ -49,7 +50,7 @@ class DocCard extends StatelessWidget {
                   children: [
                     Text(
                       status.name,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.greenAccent),
                     ),
                     // TextButton(
                     //     onPressed: () {
@@ -61,14 +62,16 @@ class DocCard extends StatelessWidget {
                     //     child: docName != "Ninguno"
                     //         ? const Text("Ver")
                     //         : const Text("Registrar")),
-                    Text(docName.isNotEmpty ? "Ver" : "Registrar")
+                    Text(docName != "Ninguno" ? "Ver" : "Registrar",
+                    style: TextStyle(color: Colors.blue),)
                   ],
                 )
               ],
             )),
       ),
-      onTap: () => Navigator.pushNamedAndRemoveUntil(
-          context, DocRegister.route, (route) => false),
+      onTap: () => Navigator.pushNamed(
+          // context, DocUpdateViewPage.route),
+          context, docName != "Ninguno" ? DocUpdateViewPage.route : DocRegisterPage.route),
     );
 //
   }
