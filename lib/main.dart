@@ -1,11 +1,10 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:movil_modular/pages/DocUpdateView.dart';
 import 'package:movil_modular/pages/consultar.dart';
 import 'package:movil_modular/pages/DocRegister.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/modificar.dart';
 import 'package:movil_modular/pages/moduleDoc.dart';
-import 'package:movil_modular/pages/registrar.dart';
 import 'package:movil_modular/pages/profile.dart';
 
 void main() {
@@ -20,12 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         HomePage.route: (context) => const HomePage(),
-        // RegisterPage.route: (context) => RegisterPage(),
         // EditPage.route: (context) => const EditPage(),
         // ConsultPage.route: (context) => const ConsultPage(),
         ProfilePage.route:(context) => const ProfilePage(),
         ModuleDoc.route:(context) => const ModuleDoc(),
-        DocRegister.route:(context) => const DocRegister()
+        DocRegisterPage.route:(context) => const DocRegisterPage(),
+        DocUpdateViewPage.route:(context) => const DocUpdateViewPage()
       },
       initialRoute: HomePage.route,
     );
