@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:movil_modular/pages/home.dart';
+import 'package:movil_modular/pages/student/home.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String route = "/profile";

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movil_modular/models/routeParamsModularProjectPage.dart';
-import 'package:movil_modular/pages/moduleDoc.dart';
+import 'package:movil_modular/pages/student/moduleDoc.dart';
 
 class ModuleCard extends StatelessWidget {
   final String title;

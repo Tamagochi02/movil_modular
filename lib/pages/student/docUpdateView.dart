@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:movil_modular/pages/home.dart';
-import 'package:movil_modular/pages/moduleDoc.dart';
+import 'package:movil_modular/pages/student/home.dart';
+import 'package:movil_modular/pages/student/moduleDoc.dart';
 import 'package:file_picker/file_picker.dart';
 
 class DocUpdateViewPage extends StatefulWidget {
@@ -94,7 +94,7 @@ class _DocUpdateViewPageState extends State<DocUpdateViewPage> {
               padding: EdgeInsets.all(10),
               child: SizedBox(
                   height: 200,
-                  child: Column(
+                  child: ListView(
                     children: [
                       Text("Observaciones"),
                       TextField(

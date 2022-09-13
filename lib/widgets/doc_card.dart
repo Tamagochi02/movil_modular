@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movil_modular/pages/DocRegister.dart';
-import 'package:movil_modular/pages/DocUpdateView.dart';
+import 'package:movil_modular/pages/student/docRegister.dart';
+import 'package:movil_modular/pages/student/docUpdateView.dart';
 
 enum DocStatus { sinEntregar, entregado, debeModificarse, revisado }
 

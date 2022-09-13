@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:movil_modular/pages/home.dart';
-import 'package:movil_modular/pages/moduleDoc.dart';
+import 'package:movil_modular/pages/student/home.dart';
+import 'package:movil_modular/pages/student/moduleDoc.dart';
 import 'package:file_picker/file_picker.dart';
 
 class DocRegisterPage extends StatefulWidget {
@@ -42,7 +42,7 @@ class _DocRegisterPageState extends State<DocRegisterPage> {
       body: Padding(
         padding: const EdgeInsets.all(17.0),
         //
-        child: Column(children: [
+        child: ListView(children: [
           TextField(
             decoration: InputDecoration(label: Text("Nombre del proyecto:")),
           ),
@@ -180,16 +180,20 @@ class _DocRegisterPageState extends State<DocRegisterPage> {
               ),
             ),
           //
-          SizedBox(height: 200),
+          SizedBox(height: 180),
           //
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Registrar"),
-            style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 60, 132, 217),
-              padding: const EdgeInsets.all(15),
-              shape: new RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(30.0),
+          SizedBox(
+            width: 100,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text("Registrar"),
+              style: ElevatedButton.styleFrom(
+                primary: Color.fromARGB(255, 60, 132, 217),
+                padding: const EdgeInsets.all(15),
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(30.0),
+                ),
               ),
             ),
           )
