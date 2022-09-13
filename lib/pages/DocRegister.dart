@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:movil_modular/models/routeParamsModularProjectPage.dart';
 import 'package:movil_modular/pages/home.dart';
 import 'package:movil_modular/pages/moduleDoc.dart';
 import 'package:file_picker/file_picker.dart';
 
-class DocRegister extends StatefulWidget {
+class DocRegisterPage extends StatefulWidget {
   static const String route = "/docregister";
-  const DocRegister({Key? key}) : super(key: key);
+  const DocRegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<DocRegister> createState() => _DocRegisterState();
+  State<DocRegisterPage> createState() => _DocRegisterPageState();
 }
 
-class _DocRegisterState extends State<DocRegister> {
+class _DocRegisterPageState extends State<DocRegisterPage> {
+  bool showDropdownStudents = false;
+  bool showDropdownTeachers = false;
+  bool fileChoosed = false;
+  String filee = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +31,8 @@ class _DocRegisterState extends State<DocRegister> {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            // Navigator.pushNamedAndRemoveUntil(
-            //     context, ModuleDoc.route, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(
+                context, ModuleDoc.route, (route) => false);
           },
           icon: Icon(Icons.close),
           color: Color.fromARGB(255, 51, 51, 51),
@@ -54,42 +58,141 @@ class _DocRegisterState extends State<DocRegister> {
                 height: 100,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 40.0, vertical: 20.0),
+                        padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)),
                         primary: Color.fromARGB(255, 224, 83, 72)),
                     onPressed: () async {
-                      // FilePickerResult? result =
-                      //     await FilePicker.platform.pickFiles();
+                      FilePickerResult? result =
+                          await FilePicker.platform.pickFiles(
+                            type: FileType.custom,
+                            allowedExtensions: ['pdf'],
+                          );
 
-                      // if (result != null) {
-                      //   PlatformFile file = result.files.first;
-
-                      //   print(file.name);
-                      //   print(file.bytes);
-                      //   print(file.size);
-                      //   print(file.extension);
-                      //   print(file.path);
-                      // } else {
-                      //   // User canceled the picker
-                      // }
+                      if (result != null) {
+                        PlatformFile file = result.files
+                            .first; // variable que guarda info del documento
+                        filee = file.name;
+                        fileChoosed = true;
+                        setState(() {
+                          
+                        });
+                      } else { // si el usuario no sube nada
+                        fileChoosed = false;
+                      }
                     },
-                    child: Icon(Icons.picture_as_pdf_outlined)),
+                    child: Icon(
+                      Icons.picture_as_pdf_outlined,
+                      size: 60,
+                    )),
               ),
-              Text("Nombre de archivo.pdf"),
+              Text(fileChoosed ? filee : "Sube un archivo")
             ],
           ),
-          DropdownButton(
-              items: <DropdownMenuItem<String>>[
-                DropdownMenuItem(value: "1", child: Text('1')),
-                DropdownMenuItem(value: "2", child: Text('2')),
-                DropdownMenuItem(value: "3", child: Text('3'))
-              ],
-              onChanged: ((value) => setState(
-                    () {},
-                  ))),
           //
+          SizedBox(height: 45),
+          //
+          InkWell(
+            onTap: () {
+              setState(() {
+                showDropdownStudents = !showDropdownStudents;
+              });
+            },
+            child: Container(
+              width: double.maxFinite,
+              alignment: Alignment.center,
+              padding: EdgeInsets.all(10),
+              child: Text("Integrantes del equipo"),
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ),
+          if (showDropdownStudents)
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                      ),
+                      Text("Alumno 1")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                      ),
+                      Text("Alumno 2")
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          //
+          SizedBox(height: 45),
+          //
+          InkWell(
+            onTap: () {
+              setState(() {
+                showDropdownTeachers = !showDropdownTeachers;
+              });
+            },
+            child: Container(
+              width: double.maxFinite,
+              alignment: Alignment.center,
+              padding: EdgeInsets.all(10),
+              child: Text("Asesor"),
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ),
+          if (showDropdownTeachers)
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                      ),
+                      Text("Asesor 1")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                      ),
+                      Text("Asesor 2")
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          //
+          SizedBox(height: 200),
+          //
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Registrar"),
+            style: ElevatedButton.styleFrom(
+              primary: Color.fromARGB(255, 60, 132, 217),
+              padding: const EdgeInsets.all(15),
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(30.0),
+              ),
+            ),
+          )
         ]),
       ),
     );
