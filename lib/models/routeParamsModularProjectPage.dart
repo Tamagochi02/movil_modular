@@ -1,6 +1,11 @@
 class RouteParamsModularProjectPage {
-  String projectId;
-  String title;
+  static String projectId = '';
+  static String title = '';
 
-  RouteParamsModularProjectPage(this.title, this.projectId);
+  RouteParamsModularProjectPage._();
+
+  static assign(String title, String projectId) {
+    RouteParamsModularProjectPage.title = title;
+    RouteParamsModularProjectPage.projectId = projectId;
+  }
 }
