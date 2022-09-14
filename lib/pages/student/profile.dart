@@ -37,43 +37,70 @@ class _ProfilePageState extends State<ProfilePage> {
         child: ListView(
           children: [
             TextField(
-              decoration: InputDecoration(label: Text("Código:")),
+              decoration: InputDecoration(
+                label: Text("Código:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
               enabled: false,
             ),
             TextField(
-              decoration: InputDecoration(label: Text("Matrícula:")),
+              decoration: InputDecoration(
+                label: Text("Matrícula:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
               enabled: false,
             ),
             TextField(
-              decoration: InputDecoration(label: Text("Correo institucional:")),
+              decoration: InputDecoration(
+                label: Text("Correo institucional:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
               enabled: false,
             ),
             TextField(
-              decoration: InputDecoration(label: Text("Estado:")),
+              decoration: InputDecoration(
+                label: Text("Estado:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
               enabled: false,
             ),
             TextField(
               controller: profileNameController,
-              decoration: InputDecoration(label: Text("Nombre:")),
+              decoration: InputDecoration(
+                label: Text("Nombre:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
             ),
             TextField(
               controller: profileLastname1Controller,
-              decoration: InputDecoration(label: Text("Apellido paterno:")),
+              decoration: InputDecoration(
+                label: Text("Apellido paterno:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
             ),
             TextField(
               controller: profileLastname2Controller,
-              decoration: InputDecoration(label: Text("Apellido materno:")),
+              decoration: InputDecoration(
+                label: Text("Apellido materno:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
             ),
             TextField(
               controller: profilePasswordController,
-              decoration: InputDecoration(label: Text("Contraseña:")),
+              decoration: InputDecoration(
+                label: Text("Contraseña:"),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+              ),
             ),
             TextField(
               controller: profilePassword2Controller,
-              decoration:
-                  InputDecoration(label: Text("Vuelve a escribir contraseña:")),
+              decoration: InputDecoration(
+                label: Text("Vuelve a escribir contraseña:"),
+              ),
             ),
+            // 
             SizedBox(height: 20),
+            // 
             ElevatedButton(
               onPressed: () {},
               child: Text("Actualizar datos"),
