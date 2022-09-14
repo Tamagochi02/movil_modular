@@ -189,7 +189,7 @@ class _DocRegisterPageState extends State<DocRegisterPage> {
               onPressed: () {},
               child: Text("Registrar"),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 60, 132, 217),
+                primary: Color.fromARGB(255, 30, 58, 138),
                 padding: const EdgeInsets.all(15),
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0),

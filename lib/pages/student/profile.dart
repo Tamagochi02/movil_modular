@@ -22,6 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 30, 58, 138),
         title: Text("Información personal"),
         centerTitle: true,
         leading: IconButton(
@@ -77,7 +78,7 @@ class _ProfilePageState extends State<ProfilePage> {
               onPressed: () {},
               child: Text("Actualizar datos"),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 60, 132, 217),
+                primary: Color.fromARGB(255, 30, 58, 138),
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0),
                 ),
