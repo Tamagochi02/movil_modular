@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:movil_modular/pages/registerUser.dart';
 import 'package:passwordfield/passwordfield.dart';
 
 class LoginPage extends StatefulWidget {
@@ -89,7 +90,10 @@ class _LoginPageState extends State<LoginPage> {
               width: 170,
               height: 30,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context, RegisterUserPage.route, (route) => false);
+                },
                 child: Text("Crear una cuenta",
                     style: TextStyle(
                       color: Colors.black,
