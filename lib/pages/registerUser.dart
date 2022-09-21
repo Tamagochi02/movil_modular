@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movil_modular/pages/logIn.dart';
 import 'package:movil_modular/pages/registerStudent.dart';
+import 'package:movil_modular/pages/registerTeacher.dart';
 
 class RegisterUserPage extends StatelessWidget {
   static const String route = "/registeruser";
@@ -54,7 +55,10 @@ class RegisterUserPage extends StatelessWidget {
                     width: 300,
                     height: 50,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(
+                          context, RegisterTeacherPage.route);
+                        },
                         child: Text("Docente"),
                         style: ElevatedButton.styleFrom(
                           primary: Color.fromARGB(255, 170, 96, 219),
