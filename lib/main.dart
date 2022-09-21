@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movil_modular/pages/logIn.dart';
+import 'package:movil_modular/pages/registerStudent.dart';
 import 'package:movil_modular/pages/registerUser.dart';
 import 'package:movil_modular/pages/student/docUpdateView.dart';
 import 'package:movil_modular/pages/student/docRegister.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         ProfilePage.route:(context) => const ProfilePage(),
         ModuleDoc.route:(context) => const ModuleDoc(),
         DocRegisterPage.route:(context) => const DocRegisterPage(),
-        DocUpdateViewPage.route:(context) => const DocUpdateViewPage()
+        DocUpdateViewPage.route:(context) => const DocUpdateViewPage(),
+        RegisterStudentPage.route:(context) => const RegisterStudentPage()
       },
       // initialRoute: HomePage.route,
       initialRoute: LoginPage.route,
