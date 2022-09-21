@@ -22,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 30, 58, 138),
+        backgroundColor: Color.fromARGB(255, 68, 117, 223),
         title: Text("Información personal"),
         centerTitle: true,
         leading: IconButton(

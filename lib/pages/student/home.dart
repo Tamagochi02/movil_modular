@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text("Gestor Modular"),
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 30, 58, 138),
+          backgroundColor: Color.fromARGB(255, 68, 117, 223),
           leading: IconButton(
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(

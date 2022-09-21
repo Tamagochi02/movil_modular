@@ -112,7 +112,7 @@ class _DocUpdateViewPageState extends State<DocUpdateViewPage> {
             onPressed: () {},
             child: Text("Actualizar datos"),
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 30, 58, 138),
+              primary: Color.fromARGB(255, 68, 117, 223),
               padding: const EdgeInsets.all(15),
               shape: new RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(30.0),

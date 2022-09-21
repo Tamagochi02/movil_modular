@@ -14,7 +14,7 @@ class ModuleDoc extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 30, 58, 138),
+          backgroundColor: Color.fromARGB(255, 68, 117, 223),
           title: Text(RouteParamsModularProjectPage.title),
           centerTitle: true,
         ),
