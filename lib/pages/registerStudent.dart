@@ -16,13 +16,13 @@ class _RegisterStudentPageState extends State<RegisterStudentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 68, 117, 223),
-        title: Text("Registro de Alumno"),
+        backgroundColor: Colors.white,
+        title: Text("Registro de Alumno", style: TextStyle(color: Color.fromARGB(255, 51, 51, 51)),),
         centerTitle: true,
         leading: IconButton(onPressed: () {
           Navigator.pushNamedAndRemoveUntil(
                           context, RegisterUserPage.route, (route) => false);
-        }, icon: Icon(Icons.close)),
+        }, icon: Icon(Icons.close, color: Color.fromARGB(255, 51, 51, 51),)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(17.0),
@@ -104,7 +104,7 @@ class _RegisterStudentPageState extends State<RegisterStudentPage> {
               onPressed: () {},
               child: Text("Registrarme"),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 30, 58, 138),
+                primary: Color.fromARGB(255, 51, 51, 51),
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0),
                 ),
