@@ -40,9 +40,9 @@ class _DocUpdateViewPageState extends State<DocUpdateViewPage> {
       ),
       //
       body: Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
         //
-        child: Column(children: [
+        child: ListView(children: [
           TextField(
             decoration: InputDecoration(label: Text("Nombre del proyecto:")),
           ),

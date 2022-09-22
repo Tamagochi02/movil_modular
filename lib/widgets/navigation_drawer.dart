@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movil_modular/pages/logIn.dart';
 import 'package:movil_modular/pages/student/home.dart';
-
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -9,12 +9,12 @@ class NavigationDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         child: Padding(
-      padding: const EdgeInsets.all(15),
+      padding: EdgeInsets.symmetric(horizontal: 23, vertical: 25),
       child: Column(
         children: [
+          SizedBox(height: 30),
           Row(
             children: [
-              //
               const Text(
                 "Alumno",
                 style: const TextStyle(
@@ -113,13 +113,12 @@ class NavigationDrawer extends StatelessWidget {
               ),
             ],
           ),
-          // 
+          //
           Divider(),
           //
           TextButton(
-              onPressed: () {},
-              /*() => Navigator.pushNamedAndRemoveUntil(
-                  context, RegisterPage.route, (route) => false),*/
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                  context, LoginPage.route, (route) => false),
               child: Row(
                 children: const [
                   Icon(

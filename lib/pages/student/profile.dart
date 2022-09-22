@@ -33,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
             icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
         child: ListView(
           children: [
             TextField(
@@ -43,6 +43,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               enabled: false,
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               decoration: InputDecoration(
                 label: Text("Matrícula:"),
@@ -50,6 +53,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               enabled: false,
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               decoration: InputDecoration(
                 label: Text("Correo institucional:"),
@@ -57,6 +63,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               enabled: false,
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               decoration: InputDecoration(
                 label: Text("Estado:"),
@@ -64,6 +73,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               enabled: false,
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               controller: profileNameController,
               decoration: InputDecoration(
@@ -71,6 +83,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               controller: profileLastname1Controller,
               decoration: InputDecoration(
@@ -78,6 +93,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               controller: profileLastname2Controller,
               decoration: InputDecoration(
@@ -85,6 +103,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               controller: profilePasswordController,
               decoration: InputDecoration(
@@ -92,15 +113,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
+            //
+            SizedBox(height: 20),
+            //
             TextField(
               controller: profilePassword2Controller,
               decoration: InputDecoration(
                 label: Text("Vuelve a escribir contraseña:"),
               ),
             ),
-            // 
+            //
             SizedBox(height: 20),
-            // 
+            //
             ElevatedButton(
               onPressed: () {},
               child: Text("Actualizar datos"),

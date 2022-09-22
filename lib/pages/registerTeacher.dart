@@ -25,7 +25,7 @@ class _RegisterTeacherPageState extends State<RegisterTeacherPage> {
         }, icon: Icon(Icons.close, color: Color.fromARGB(255, 51, 51, 51),)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
         child: ListView(children: [
           TextField(
             decoration: InputDecoration(
@@ -78,7 +78,7 @@ class _RegisterTeacherPageState extends State<RegisterTeacherPage> {
             ),
           ),
           //
-          SizedBox(height: 50),
+          SizedBox(height: 180),
           //
           SizedBox(
             height: 50,
@@ -86,7 +86,7 @@ class _RegisterTeacherPageState extends State<RegisterTeacherPage> {
               onPressed: () {},
               child: Text("Registrarme"),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 30, 58, 138),
+                primary: Color.fromARGB(255, 51, 51, 51),
                 shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(30.0),
                 ),

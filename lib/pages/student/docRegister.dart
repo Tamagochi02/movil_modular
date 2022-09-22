@@ -40,7 +40,7 @@ class _DocRegisterPageState extends State<DocRegisterPage> {
       ),
       //
       body: Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
         //
         child: ListView(children: [
           TextField(

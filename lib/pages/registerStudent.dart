@@ -25,7 +25,7 @@ class _RegisterStudentPageState extends State<RegisterStudentPage> {
         }, icon: Icon(Icons.close, color: Color.fromARGB(255, 51, 51, 51),)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
         child: ListView(children: [
           TextField(
             decoration: InputDecoration(

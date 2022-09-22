@@ -31,7 +31,7 @@ class RegisterUserPage extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 240),
+              padding: EdgeInsets.symmetric(vertical: 240, horizontal: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

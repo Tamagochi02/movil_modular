@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 51, 51, 51),
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Column(
           children: [
             Text(
@@ -47,13 +47,16 @@ class _LoginPageState extends State<LoginPage> {
             //
             SizedBox(height: 45),
             //
-            PasswordField(
-              inputDecoration: PasswordDecoration(
-                inputPadding: const EdgeInsets.symmetric(horizontal: 10),
-                inputStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
+            TextField(
+              decoration: InputDecoration(
+                label: Text(
+                  "Contraseña:",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                  ),
                 ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
             //
@@ -92,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
-                    context, RegisterUserPage.route, (route) => false);
+                      context, RegisterUserPage.route, (route) => false);
                 },
                 child: Text("Crear una cuenta",
                     style: TextStyle(
