@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:movil_modular/pages/logIn.dart';
+import 'package:movil_modular/pages/login/logIn_view.dart';
 import 'package:movil_modular/pages/registerStudent.dart';
 import 'package:movil_modular/pages/registerTeacher.dart';
 

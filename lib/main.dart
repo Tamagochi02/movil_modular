@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movil_modular/pages/logIn.dart';
+import 'package:movil_modular/pages/login/logIn_view.dart';
 import 'package:movil_modular/pages/registerStudent.dart';
 import 'package:movil_modular/pages/registerTeacher.dart';
 import 'package:movil_modular/pages/registerUser.dart';
