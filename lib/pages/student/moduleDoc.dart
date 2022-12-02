@@ -18,7 +18,7 @@ class ModuleDoc extends StatelessWidget {
           title: Text(RouteParamsModularProjectPage.title),
           centerTitle: true,
         ),
-        drawer: const NavigationDrawer(),
+        drawer: NavigationDrawer(),
         body: Padding(
           padding: const EdgeInsets.all(17.0),
           child: Column(
