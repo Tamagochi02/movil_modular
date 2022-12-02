@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:movil_modular/pages/logIn.dart';
+import 'package:movil_modular/pages/login/logIn_view.dart';
+import 'package:movil_modular/pages/login/login_controller.dart';
 import 'package:movil_modular/pages/student/home.dart';
 
 class NavigationDrawer extends StatelessWidget {
-  const NavigationDrawer({Key? key}) : super(key: key);
+  final controller = LoginController();
+  NavigationDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -117,8 +119,11 @@ class NavigationDrawer extends StatelessWidget {
           Divider(),
           //
           TextButton(
-              onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                  context, LoginPage.route, (route) => false),
+              onPressed: () {
+                controller.logoutStudent();
+                Navigator.pushNamedAndRemoveUntil(
+                    context, LoginPage.route, (route) => false);
+              },
               child: Row(
                 children: const [
                   Icon(
